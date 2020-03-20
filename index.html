@@ -17,7 +17,7 @@ function onLoad() {
 		this.contentWindow.postMessage(JSON.stringify({messageType: 'collector.iframe.loaded'}), url);
 	}
 	var id = window.location.hash.substr(1);
-	iframe.src = url + "/rest/collectors/1.0/template/form/c773dd0e?os_authType=none";
+	iframe.src = url + "/rest/collectors/1.0/template/form/" + (id == '' ? '_' : encodeURIComponent(id)) + "?os_authType=none";
 }
 
 window.addEventListener("message", function(event) {
