@@ -1,27 +1,69 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script>
-            	// Requires jQuery!
-		jQuery.ajax({
-		    url: "https://jira.di2e.net/s/ce8e76846d0cbc183c77a688624da3de-T/wzv96s/713012/65f3dd454013999e25668f47db9d1c3a/2.0.31/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector-embededjs.js?locale=en-US&collectorId=c773dd0e",
-		    type: "get",
-		    cache: true,
-		    dataType: "script"
-		});
+<head>
 
-		 window.ATL_JQ_PAGE_PROPS =  {
-			"triggerFunction": function(showCollectorDialog) {
-				//Requires that jQuery is available! 
-				jQuery("#myCustomTrigger").click(function(e) {
-					e.preventDefault();
-					showCollectorDialog();
-			});
-		}};
+<script type="text/javascript" src="/s/ce8e76846d0cbc183c77a688624da3de-T/wzv96s/713012/65f3dd454013999e25668f47db9d1c3a/2.0.31/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:form-collector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:form-collector.js?locale=en-US" data-wrm-key="com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:form-collector" data-wrm-batch-type="resource" data-initially-rendered></script>
 
-        </script>
-    </head>
-    <body>
-       <h1>HOS AMI Request</h1>
-    </body>
+</head>
+<body id="atlScriptlet">
+<div class="aui-dialog collector-dialog custom-collector">
+    <h2 class="dialog-title"></h2>
+    <form id="jic-collector-form" class="aui " action="https://jira.di2e.net/rest/collectors/1.0/template/custom/c773dd0e" method="POST">
+        <div class="content-body">
+            <div class="event-shield-wrapper">
+                <div class="event-shield"></div>
+                <div class="aui-message info custom-msg"><span class="aui-icon icon-info"></span>
+    <p>In order to access HOS Amazon Machine Images (AMIs), please provide us with the following information below:</p>
+
+<ul>
+	<li>AWS Gov-cloud customer ID</li>
+</ul>
+
+</div>
+                                    <fieldset class="hidden parameters">
+                        <input type="hidden" title="projectKey" value="EGSHOS"/>
+                        <input type="hidden" title="issueType" value="11009"/>
+                        <input type="hidden" title="customTemplate" value="true"/>
+                        <input type="hidden" title="customLabels" value=""/>
+                        <input type="hidden" title="fields" value="[&quot;summary&quot;,&quot;description&quot;]"/>
+                    </fieldset>
+                    <input type="hidden" name="atl_token" value="BL4S-LU38-KDZP-E60Y_31a55bfd38d924f5bc52b3a175e23e7c4ac00133_lin"/>
+                    <input type="hidden" name="pid" value="38908"/>
+                                <div class="custom-fields-container">
+
+                </div>
+
+                <fieldset class="hidden parameters">
+                    <input type="hidden" title="collectorId" value="c773dd0e"/>
+                    <input type="hidden" name="pid" value="38908">
+                    <input type="hidden" name="atl_token" value="BL4S-LU38-KDZP-E60Y_31a55bfd38d924f5bc52b3a175e23e7c4ac00133_lin"/>
+                    <div id="attach-max-size" class="hidden">53000000</div>
+                        <input type="file" class="hidden" name="_tricky_"/>
+                </fieldset>
+                <div class="aui-message info login-msg"><span class="aui-icon icon-info"></span>
+        We've currently got you logged in as <a
+            href='https://jira.di2e.net/secure/ViewProfile.jspa?name=kevin.gigiano'
+            target='_blank'>Kevin Gigiano</a>. This feedback will be created using this user unless this is <a href='#' id='not-you-lnk'>not you.</a>
+</div>
+
+<div id="name-group" class="contact-form-fields field-group hidden">
+    <label for="fullname">Name</label>
+    <input type="text" name="fullname" class="text" id="fullname">
+</div>
+
+<div id="email-group" class="contact-form-fields field-group hidden">
+    <label for="email">Email</label>
+    <input type="text" name="email" class="text" id="email">
+</div>
+
+                    <input type="hidden" name="webInfo" id="webInfo" />
+           </div>
+        </div>
+        <div class="dialog-button-panel">
+            <input type="submit" class="aui-button aui-button-primary submit-button"  value="Submit"/>
+            <a href="#" class="cancel">Close</a>
+        </div>
+    </form>
+</div>
+</body>
 </html>
