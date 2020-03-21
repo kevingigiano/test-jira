@@ -18,22 +18,6 @@ function onLoad() {
 	}
 	var id = window.location.hash.substr(1);
 	iframe.src = url + "/rest/collectors/1.0/template/form/" + (id == '' ? '_' : encodeURIComponent(id)) + "?os_authType=none";
-	
-	iframe.windowContent.ATL_JQ_PAGE_PROPS = $.extend(iframe.windowContent.ATL_JQ_PAGE_PROPS, {
-
-	// ==== custom trigger function ====
-	triggerFunction : function( showCollectorDialog ) {
-		$('#feedback-button').on( 'click', function(e) {
-			e.preventDefault();
-			showCollectorDialog();
-		}); 
-	},
-	// ==== we add the code below to set the field values ====
-	fieldValues: {
- 		summary : 'Feedback for new website designs',
-		description : 'The font doesn\'t quite look right',
-	}					
-});
 }
 
 window.addEventListener("message", function(event) {
@@ -65,5 +49,5 @@ body {
 }
 </style>
 </head>
-<body onload="onLoad()"><div id="atlwdg-frame" scrolling="no" frameborder="0" src=""></div></body>
+<body onload="onLoad()"><iframe id="atlwdg-frame" scrolling="no" frameborder="0" src=""></iframe></body>
 </html>
