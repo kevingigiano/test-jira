@@ -19,7 +19,7 @@ function onLoad() {
 	var id = window.location.hash.substr(1);
 	iframe.src = url + "/rest/collectors/1.0/template/form/" + (id == '' ? '_' : encodeURIComponent(id)) + "?os_authType=none";
 	
-	window.ATL_JQ_PAGE_PROPS = $.extend(window.ATL_JQ_PAGE_PROPS, {
+	iframe.windowContent.ATL_JQ_PAGE_PROPS = $.extend(iframe.windowContent.ATL_JQ_PAGE_PROPS, {
 
 	// ==== custom trigger function ====
 	triggerFunction : function( showCollectorDialog ) {
@@ -65,5 +65,5 @@ body {
 }
 </style>
 </head>
-<body onload="onLoad()"><iframe id="atlwdg-frame" scrolling="no" frameborder="0" src=""></iframe></body>
+<body onload="onLoad()"><div id="atlwdg-frame" scrolling="no" frameborder="0" src=""></div></body>
 </html>
