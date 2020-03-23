@@ -24,7 +24,7 @@ window.addEventListener("message", function(event) {
 	switch(event.data) {
 		case "cancelFeedbackDialog":
 			alert("Your request has successfully been submitted to JIRA, thanks!");
-			onLoad(); // Restart collector
+			close();
 		break;
 	};
 }, false);
